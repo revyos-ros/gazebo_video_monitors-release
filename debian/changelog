@@ -1,0 +1,99 @@
+ros-iron-gazebo-video-monitor-plugins (0.8.0-1bullseye) bullseye; urgency=high
+
+  * Migrate plugins package
+  * Contributors: Nick Lamprianidis
+
+ -- Nick Lamprianidis <info@nlamprian.me>  Sat, 21 Oct 2023 22:00:00 -0000
+
+ros-iron-gazebo-video-monitor-plugins (0.7.0-1bullseye) bullseye; urgency=high
+
+  * Resolve catkin lint errors
+  * Add service for deferred initialization
+    Launching a simulation with a robot that has ray sensors may make
+    Gazebo/ODE crash. The part that makes the difference is the creation
+    of the scene (if skipped, the crash goes away). Having found no
+    sensible reason why this is, I add this service to give control to
+    the user when to initialize the plugin.
+
+ -- Nick Lamprianidis <info@nlamprian.me>  Sun, 22 Aug 2021 22:00:00 -0000
+
+ros-iron-gazebo-video-monitor-plugins (0.6.0-1bullseye) bullseye; urgency=high
+
+  * Add metapackage
+    * Move messages and services to gazebo_video_monitor_msgs
+    * Update gazebo_video_monitor_plugins to use gazebo_video_monitor_msgs
+    * Add gazebo_video_monitors metapackage
+
+ -- Nick Lamprianidis <info@nlamprian.me>  Sat, 05 Dec 2020 23:00:00 -0000
+
+ros-iron-gazebo-video-monitor-plugins (0.5.0-1bullseye) bullseye; urgency=high
+
+  * Address gcc lambda bug
+  * Fix logs
+  * Fix pose multiplications for noetic
+    Issue: https://osrf-migration.github.io/ignition-gh-pages/#!/ignitionrobotics/ign-math/pull-requests/301/page/1
+
+ -- Nick Lamprianidis <info@nlamprian.me>  Sat, 26 Sep 2020 22:00:00 -0000
+
+ros-iron-gazebo-video-monitor-plugins (0.4.2-1bullseye) bullseye; urgency=high
+
+  * Enable C++14
+
+ -- Nick Lamprianidis <info@nlamprian.me>  Sat, 29 Aug 2020 22:00:00 -0000
+
+ros-iron-gazebo-video-monitor-plugins (0.4.1-1bullseye) bullseye; urgency=high
+
+  * Fix cmake and compiler warnings
+
+ -- Nick Lamprianidis <info@nlamprian.me>  Thu, 20 Aug 2020 22:00:00 -0000
+
+ros-iron-gazebo-video-monitor-plugins (0.4.0-1bullseye) bullseye; urgency=high
+
+  * Add multi view monitor plugin
+    Support quadrant camera streams in the video recorder
+  * Add license notice
+
+ -- Nick Lamprianidis <info@nlamprian.me>  Fri, 14 Aug 2020 22:00:00 -0000
+
+ros-iron-gazebo-video-monitor-plugins (0.3.0-1bullseye) bullseye; urgency=high
+
+  * Various fixes
+    * Fix bug with reading the cameraReference configurations
+    * Fix success field on result when discarding in stop recording
+    * Add a walking actor in video monitor plugin world as a dynamic element
+    * Expose recorder library
+  * Add multi video monitor plugin
+  * Add multi camera monitor plugin
+    * Add camera contains plugin and box marker visualizer
+    * Add test world for multi camera monitor and camera contains plugins
+    * Use default video name in the recorder when one is not provided
+    * Fix gazebo topic names for camera images in multicamera sensor
+
+ -- Nick Lamprianidis <info@nlamprian.me>  Wed, 12 Aug 2020 22:00:00 -0000
+
+ros-iron-gazebo-video-monitor-plugins (0.2.0-1bullseye) bullseye; urgency=high
+
+  * Parameterize log prefixes
+  * Drop specific OpenCV version
+  * Refactor gazebo video monitor plugin
+    * Introduce gazebo video recorder to host recording functionality and enable reusability
+    * Introduce gazebo monitor base plugin to host common members and structure plugin initialization
+    * Add option to disable the window in the gazebo video monitor plugin
+    * Update documentation
+
+ -- Nick Lamprianidis <info@nlamprian.me>  Sun, 28 Jun 2020 22:00:00 -0000
+
+ros-iron-gazebo-video-monitor-plugins (0.1.1-1bullseye) bullseye; urgency=high
+
+  * Set path of temporary recording
+  * Add fix for initial camera attachment
+
+ -- Nick Lamprianidis <info@nlamprian.me>  Wed, 22 Apr 2020 22:00:00 -0000
+
+ros-iron-gazebo-video-monitor-plugins (0.1.0-1bullseye) bullseye; urgency=high
+
+  * Add multicamera sensor and video monitor plugin
+
+ -- Nick Lamprianidis <info@nlamprian.me>  Mon, 20 Apr 2020 22:00:00 -0000
+
+
