@@ -1,0 +1,12 @@
+Source: ros-iron-gazebo-video-monitor-utils
+Section: misc
+Priority: optional
+Maintainer: Nick Lamprianidis <info@nlamprian.me>
+Build-Depends: debhelper (>= 9.0.0), ros-iron-ros-workspace, python3-all, python3-setuptools, dh-python
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-iron-gazebo-video-monitor-utils
+Architecture: any
+Depends: ${python3:Depends}, ${misc:Depends}, ros-iron-gazebo-msgs, ros-iron-rclpy, ros-iron-std-srvs, ros-iron-ros-workspace
+Description: Contains utility scripts that are meant to interact with the gazebo video monitor plugins.
